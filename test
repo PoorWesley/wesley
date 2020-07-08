@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+class Circle
+{
+private:
+    double radius;
+public:
+    double GetArea();
+    Circle(double _radius);
+};
+double Circle::GetArea()
+{
+    double PAI=3.14159;
+    return PAI*radius*radius;
+}
+Circle::Circle(double  _radius)
+{
+    radius=_radius;
+}
+int main()
+{
+    double ra;
+    cout<<"radius=";
+    cin>>ra;
+
+    Circle r(ra);
+
+    cout<<r.GetArea();
+    return 0;
+}
